@@ -18,7 +18,7 @@ const BookRoom = () => {
       if (result.isConfirmed) {
         setTimeout(() => {
           navigate("/");
-        }, 2000);
+        }, 3000);
       }
     });
   };

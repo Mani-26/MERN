@@ -10,14 +10,14 @@ function NavBar() {
   var isUser = localStorage.getItem("isUser");
   const handleClick = () => setClick(!click);
   function Search() {
-    console.log("searched")
+    console.log("searched");
   }
   return (
     <>
       <nav className="navbar">
         <div className="nav-container">
-             <div className="nav-logo">
-            <img src={image} height={35} width={35} alt="logo" ></img>
+          <div className="nav-logo">
+            <img src={image} height={35} width={35} alt="logo"></img>
             CASANEST
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
@@ -42,21 +42,28 @@ function NavBar() {
                   MY UPLOADS
                 </NavLink>
               ) : (
-                <NavLink to="/rooms" activeclassname="active"
+                <NavLink
+                  to="/rooms"
+                  activeclassname="active"
                   className="nav-links"
-                  onClick={handleClick}>ROOMS</NavLink>
+                  onClick={handleClick}
+                >
+                  ROOMS
+                </NavLink>
               )}
             </li>
-            {role === "owner" && <li className="nav-item">
-              <NavLink
-                to="/new-room"
-                activeclassname="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                New Room
-              </NavLink>
-            </li>}
+            {role === "owner" && (
+              <li className="nav-item">
+                <NavLink
+                  to="/new-room"
+                  activeclassname="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  New Room
+                </NavLink>
+              </li>
+            )}
             <li className="nav-item">
               {isUser === "true" ? (
                 <NavLink
@@ -68,11 +75,15 @@ function NavBar() {
                   LOGOUT
                 </NavLink>
               ) : (
-                <NavLink to="/login" activeclassname="active"
+                <NavLink
+                  to="/login"
+                  activeclassname="active"
                   className="nav-links"
-                  onClick={handleClick}>LOGIN</NavLink>
+                  onClick={handleClick}
+                >
+                  LOGIN
+                </NavLink>
               )}
-
             </li>
 
             <li className="nav-item">

@@ -17,8 +17,9 @@ function Home() {
           <div className="wall wall-back"></div>
         </div>
       </div>
-      <h1>WELCOME TO<br />CASANEST</h1>
-      <p>Discover a New World of Comfort and Style at CASANEST - Where Your Dream Home Awaits!</p>
+      <h1 >WELCOME TO<br />CASANEST</h1>
+      
+      <p style={{top:"65%"}}>Discover a New World of Comfort and Style at CASANEST - Where Your Dream Home Awaits!</p>
     </div>
   );
 }
